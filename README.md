@@ -19,13 +19,13 @@ To start the project (after installing all the required packages), enter the ter
 
 This will launch Frontend, which will contact Backend via HTTP requests and the page will display the data received from Backend.
 
-*SQL queries that tested the application
+* SQL queries that tested the application
 
-*INSERT INTO Users (Name, Age) VALUES('Vadem', 44)
-*DELETE FROM Users WHERE Id = 7
-*UPDATE Users SET Name = 'Viktoria', Age = 75 WHERE Id = 5
-*SELECT * FROM Users WHERE Id = 5
-*SELECT * FROM Users WHERE Name= 'Vova'
-*INSERT INTO Users (Name, Age) VALUES('Vova', 44)
-*SELECT * FROM Users WHERE Name= 'Vova'
-*DELETE FROM Users WHERE Name = 'Vadem'
+* INSERT INTO Users (Name, Age) VALUES('Vadem', 44)
+* DELETE FROM Users WHERE Id = 7
+* UPDATE Users SET Name = 'Viktoria', Age = 75 WHERE Id = 5
+* SELECT * FROM Users WHERE Id = 5
+* SELECT * FROM Users WHERE Name= 'Vova'
+* INSERT INTO Users (Name, Age) VALUES('Vova', 44)
+* SELECT * FROM Users WHERE Name= 'Vova'
+* DELETE FROM Users WHERE Name = 'Vadem'
