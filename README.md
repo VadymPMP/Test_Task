@@ -19,7 +19,7 @@ To start the project (after installing all the required packages), enter the ter
 
 This will launch Frontend, which will contact Backend via HTTP requests and the page will display the data received from Backend.
 
-SQL queries that tested the application:
+SQL queries to test the application:
 
 * INSERT INTO Users (Name, Age) VALUES('Vadem', 44)
 * DELETE FROM Users WHERE Id = 7
