@@ -2,7 +2,7 @@ import * as React from 'react';
 import User from './User.jsx'
 import SQLForm from './SQLForm.jsx'
 import api from './api.js'
-import './Styles/UserList.css'
+
 
 class UserList extends React.Component {
 
