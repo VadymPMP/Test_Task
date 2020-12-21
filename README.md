@@ -35,3 +35,10 @@ SQL queries to test the application:
 * INSERT INTO Users (Name, Age) VALUES('Vova', 44)
 * SELECT * FROM Users WHERE Name= 'Vova'
 * DELETE FROM Users WHERE Name = 'Vadem'
+* INSERT INTO Phones (Model, ManufacturerName) VALUES('5230', 'Nokia')
+* SELECT * FROM Trees WHERE Id = 1
+* DELETE FROM Windows WHERE Height = '180'
+* INSERT INTO Books (Title, NumberOfPages) VALUES('Robinzon', 327)
+* UPDATE Trees SET Kind = 'Viktoria', Age = 75 WHERE Id = 2
+* INSERT INTO Tables (Name, Height) VALUES('Desk', 150)
+* SELECT * FROM Trees WHERE Kind = 'Oak'
