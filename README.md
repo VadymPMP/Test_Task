@@ -11,6 +11,7 @@ In the "Package Manager Console" enter the command "update-database", the migrat
 * So we do not need a backup of the database
 
 Then on Solution Platform select from all parameters only "IIS Express", start the project. If you did everything correctly, a tab will start in the browser, to which the frontend will have access via http-requests.
+* My device automatically opens Google Chrome, the address of the frontend connection to the backend will be highlighted in the address field, it looks like this: https://localhost:44398/api/Users
 
 To get started with the Frontend part, you need to install the Visual Studio code program as well as Node.js
 
@@ -18,7 +19,7 @@ You need to open the ClientApp folder in the Visual Studio code.
 
 You need to enter "npm install" in the terminal, then it will automatically download all the necessary packages.
 
-* If we want to change the frontend connection addresses, we need to open the config.json file. Path to this file: Test_Task \ Test_Task \ clientapp \ src \ components \ config \ config.json
+* If we want to change the frontend connection addresses, we need to open the config.json file. Path to this file: Test_Task\Test_Task\clientapp\src\components\config\config.json
 
 To start the project (after installing all the necessary packages), enter the term in the terminal - "npm start".
 
