@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './Styles/User.css'
+import './Styles/Element.css'
 
 class Element extends React.Component {
 
@@ -8,13 +8,12 @@ class Element extends React.Component {
         this.state = { data: props.object };
         this.keys = Object.keys(this.state.data);
     }
-
     render() {
         return(
             <div>
                 <hr/>
                 {
-                    this.keys.map(k => (<p><b>{k} - {this.state.data[k]}</b></p>))                    
+                    this.keys.map(k => (<p>{k} - {this.state.data[k]}</p>))                    
                 }      
             </div>)
     }

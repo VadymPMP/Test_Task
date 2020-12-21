@@ -1,10 +1,13 @@
 import * as React from 'react';
-import Element from './User.jsx'
+import Element from './Element.jsx'
 import SQLForm from './SQLForm.jsx'
 import api from './api.js'
 
+const generateKey = (pre) => {
+    return `${ pre }_${ new Date().getTime() }`;
+}
 
-class UserList extends React.Component {
+class DataList extends React.Component {
 
     constructor(props) {
         super(props);
@@ -14,7 +17,7 @@ class UserList extends React.Component {
     }
     //load data
     loadData() {
-        api.Users().getUsers()
+        api.Datas().getData()
         .then(response => this.setState({ objects: response.data }))
         .catch(err => console.log(err));
     }
@@ -33,8 +36,9 @@ class UserList extends React.Component {
             <h2>List of data</h2>
             <div >
                 {
-                    this.state.objects.map(function (object) {
-                        return <Element key={object.id} object={object} />
+                    this.state.objects.map(function (object, index)
+                    {
+                        return <Element key={generateKey(index)} object={object} />
                     })
                 }
             </div>
@@ -42,4 +46,4 @@ class UserList extends React.Component {
     }
 }
 
-export default UserList;
+export default DataList;

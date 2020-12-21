@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import UserList from './components/UserList';
+import DataList from './components/DataList';
 
 
 function App() {
   return (
     <BrowserRouter>
         <div>
-          <Route exact path='/' component={UserList}></Route>
+          <Route exact path='/' component={DataList}></Route>
         </div>
         
     </BrowserRouter>
