@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 
 namespace Test_Task.Models
 {
-    public class User
+    public class Book
     {
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        public int NumberOfPages { get; set; }
 
-        public int Age { get; set; }
+        public string Title { get; set; }
 
-        public User() { }
+        public Book() { }
     }
 }

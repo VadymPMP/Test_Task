@@ -16,8 +16,8 @@ namespace Test_Task.Controllers
     public class UsersController : ControllerBase
     {
         private readonly DataContext _context;
-        UserRepository repo;
-        public UsersController(DataContext context, UserRepository r)
+        DataRepository repo;
+        public UsersController(DataContext context, DataRepository r)
         {
             _context = context;
             repo = r;
@@ -32,7 +32,7 @@ namespace Test_Task.Controllers
 
         // POST: api/Users
         [HttpPost]
-        public ActionResult<List<User>> PostUser([FromBody] SQLRequest SQLrequest)
+        public ActionResult<List<object>> PostData([FromBody] SQLRequest SQLrequest)
         {
             if( SQLrequest == null)
             {

@@ -30,7 +30,7 @@ namespace Test_Task
         {
             services.AddDbContext<DataContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddTransient<UserRepository>(provider => new UserRepository(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddTransient<DataRepository>(provider => new DataRepository(Configuration.GetConnectionString("DefaultConnection")));
             
             services.AddControllers().AddNewtonsoftJson();
         }

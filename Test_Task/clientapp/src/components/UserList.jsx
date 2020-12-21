@@ -1,5 +1,5 @@
 import * as React from 'react';
-import User from './User.jsx'
+import Element from './User.jsx'
 import SQLForm from './SQLForm.jsx'
 import api from './api.js'
 
@@ -8,14 +8,14 @@ class UserList extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { users: [] , sqlrequest: {request : ""}};
+        this.state = { objects: [] , sqlrequest: {request : ""}};
 
         this.onAddSQL = this.onAddSQL.bind(this);
     }
     //load data
     loadData() {
         api.Users().getUsers()
-        .then(response => this.setState({ users: response.data }))
+        .then(response => this.setState({ objects: response.data }))
         .catch(err => console.log(err));
     }
 
@@ -24,7 +24,7 @@ class UserList extends React.Component {
     }
     async onAddSQL(sqlrequest) {
         if (sqlrequest) {
-            api.Users().createSQL(sqlrequest).then(response => this.setState({users: response.data})).catch(err => console.log(err));
+            api.Users().createSQL(sqlrequest).then(response => this.setState({objects: response.data})).catch(err => console.log(err));
         }
     }
     render() {
@@ -33,9 +33,8 @@ class UserList extends React.Component {
             <h2>List of data</h2>
             <div >
                 {
-                    this.state.users.map(function (user) {
-
-                        return <User key={user.id} user={user} />
+                    this.state.objects.map(function (object) {
+                        return <Element key={object.id} object={object} />
                     })
                 }
             </div>

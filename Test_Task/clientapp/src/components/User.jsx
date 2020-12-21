@@ -1,19 +1,23 @@
 import * as React from 'react';
+import './Styles/User.css'
 
-
-class User extends React.Component {
+class Element extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { data: props.user };
+        this.state = { data: props.object };
+        this.keys = Object.keys(this.state.data);
     }
+
     render() {
-        return <div>
-            <p><b>Id - {this.state.data.id}</b></p>
-            <p><b>Name - {this.state.data.name}</b></p>
-            <p><b>Age -  {this.state.data.age}</b></p>
-        </div>;
+        return(
+            <div>
+                <hr/>
+                {
+                    this.keys.map(k => (<p><b>{k} - {this.state.data[k]}</b></p>))                    
+                }      
+            </div>)
     }
 }
 
-export default User;
+export default Element;

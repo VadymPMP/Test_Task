@@ -5,14 +5,15 @@ using System.Threading.Tasks;
 
 namespace Test_Task.Models
 {
-    public class User
+    public class Table
     {
         public int Id { get; set; }
 
         public string Name { get; set; }
 
-        public int Age { get; set; }
+        public int Height { get; set; }
 
-        public User() { }
+        public Table() { }
+
     }
 }
