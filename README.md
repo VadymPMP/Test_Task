@@ -1,23 +1,28 @@
 # Test_Task
-In this project, the backend and frontend are located in the same directory, but they must be run separately.
+In this project, the backend and interface are located in the same directory, but they must be run separately.
 
-In order to start working with Backend, you need to have a visual studio installed.
+In order to start working with Backend, you need to install a visual studio.
 
 You need to open the file "Test_Task.sln" through the visual studio.
 
-Then wait for the Nuget packages to be automatically installed.
+Then wait for Nuget packages to be installed automatically.
 
-Then in the Solution Platform select from all options only "Test_Task", start the project. If you have done everything correctly, a tab will start in the browser, which will be accessed by the frontend via http requests.
+In the "Package Manager Console" enter the command "update-database", the migrations created by me will automatically create a database for you.
+* So we do not need a backup of the database
 
-In order to start working with the Frontend part you need to have the visual studio code program installed, as well as Node.js
+Then on Solution Platform select from all parameters only "IIS Express", start the project. If you did everything correctly, a tab will start in the browser, to which the frontend will have access via http-requests.
 
-You need to open the ClientApp folder in the visual studio code.
+To get started with the Frontend part, you need to install the Visual Studio code program as well as Node.js
 
-In the terminal must enter - "npm install", then it will automatically download all the necessary packages.
+You need to open the ClientApp folder in the Visual Studio code.
 
-To start the project (after installing all the required packages), enter the term in the terminal - "npm start".
+You need to enter "npm install" in the terminal, then it will automatically download all the necessary packages.
 
-This will launch Frontend, which will contact Backend via HTTP requests and the page will display the data received from Backend.
+* If we want to change the frontend connection addresses, we need to open the config.json file. Path to this file: Test_Task \ Test_Task \ clientapp \ src \ components \ config \ config.json
+
+To start the project (after installing all the necessary packages), enter the term in the terminal - "npm start".
+
+This will launch Frontend, which will contact Backend via HTTP requests, and the page will display the data received from Backend.
 
 SQL queries to test the application:
 
